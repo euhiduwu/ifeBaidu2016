@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IFE task6</title>
+	<style type="text/css">
+	    *{
+	    	padding: 0;
+	    	margin: 0;
+	    }
+		body{
+			background-color: rgb(105,105,105);
+		}
+		.main{
+			width: 980px;
+			height: 1386px;
+			background-color: white;
+			/*left: 50%;
+			margin: 20px 0 0 -490px;
+			position: absolute;*/
+			margin: 20px 0 0 20px;
+			/*padding: 0 44px 0 44px;*/
+		}
+		/*.two{
+			width: 980px;
+			background-color: white;
+			height: 100px;
+			margin: 20px 20px 0 20px;
+		}*/
+		.lflow{
+			float: left;
+		}
+		.rflow{
+			float: right;
+		}
+		.cflow{
+			clear: both;
+		}
+		/*最上方部分*/
+		.head{
+			font-family: 黑体;
+			font-size: 12px;
+			border-bottom: 2px solid #938e8c;
+			height: 61px;
+			width: 892px;
+			margin: 0 44px;
+		}
+		.head p{
+			display: block;
+			width: 110px;
+			line-height: 21px;
+			background-color: rgb(178,34,34);
+			color: #fff;
+			padding:40px 0 0 5px;
+		}
+		.head span{
+			display: block;
+			width: 100px;
+			color: #d45d5c;
+			margin-top: 40px;
+			line-height: 21px;
+			text-align: right;
+		}
+		/*又上部分*/
+		.above{
+			margin: 30px 44px 0 0;
+			height: 189px;
+			width: 203px;
+			border-top: 2px solid #cc8091;
+			/*border-right: 2px solid #cc8091;*/
+			font-family: 微软雅黑;
+		}
+		.above p{
+			font-style:italic; 
+			font-size: 106px;
+			text-decoration: none;
+			color: #75b86b;
+			text-align: left;
+		}
+		.above h2{
+			font-size: 55px;
+			color:#cc8091;
+		}
+		.above h3{
+			font-size: 24px;
+			color: #000000;
+			text-decoration: underline;
+			font-variant: small-caps;
+			line-height: 40px;
+		}
+		.above h4{
+			line-height: 30px;
+			margin-top:20px;
+			font-size: 21px;
+			color: #cc8091;
+		}
+		.above h5{
+			line-height: 10px;
+			font-size: 12px; 
+			font-family:楷体;
+			color: #676767;
+			font-style: italic;
+		}
+		.above h6{
+			/*line-height: 18px;*/
+			font-size: 12px;
+			color: #cc8091;
+			margin-top: -5px;
+		}
+		/*中间部分*/
+		.middle{
+			margin: 30px 0 0 44px;
+			width: 641px;
+			height: 200px;
+			font-size: 12px;
+			/*border-bottom:1px solid green;*/
+		}
+		.middle span{
+			/*padding-right: 10px;*/
+			display: inline-block;
+		}
+		.middle h6{
+			font-size: 16px;
+			font-family:微软雅黑;
+			font-weight: bold;
+			text-decoration: underline;
+			margin-bottom: 16px;
+		}
+		.middle p{
+			line-height: 16px;
+		}
+		.middle a{
+			font-style: italic;
+			line-height: 16px;
+			display: inline-block;
+			color: #cd4a48;
+			color: rgba(215,74,72,0.7);
+		}
+		/*左下部分*/
+		.lbottom{
+			width: 415px;
+			height: 640px;
+			margin-left:44px;
+			/*border-bottom: 2px solid #11456b;*/
+		}
+		.lbottom img{
+			margin-top: 20px;
+		}
+		.lbottom h1{
+			display: inline-block;
+			font-size: 70px;
+			color: #f5e327;
+			font-family: 微软雅黑;
+		}
+		.lbottom h2{
+			font-size: 72px;
+			color: #f5e327;
+			font-family: 黑体;
+			font-weight: bold;
+			font-style: italic;
+		}
+		.lbottom h3{
+			font-size: 42px;
+			color: #11456b;
+			font-family: 黑体;
+			font-weight: bold;
+		}
+		.lbottom h4{
+			font-size: 33px;
+			color: #11456b;
+			font-family: 黑体;
+			font-weight: bold;
+			height: auto;
+			width: 415px;
+			text-align: left;
+			margin: 5px 0 10px 0;
+			padding-bottom: 10px;
+			border-bottom: 2px solid #11456b;
+		}
+		.lbottom p{
+			font-size: 12px;
+			color: #767777;
+			font-family: 宋体;
+			text-indent: 2em;
+		}
+		/*右下方部分的上半部分*/
+		.rbottom-up{
+			position: relative;
+			background-image: url(images\3.jpg);
+			width: 458px;
+			height: 257px;
+			margin-right: 44px;
+		}
+		.rbottom-up div{
+			position: absolute;
+			bottom: 0;
+			height: 61px;
+			width: 100%;
+			background-color: rgba(0,0,0,0.5); 
+		}
+		.rbottom-up span{
+			margin-left:40px;
+			padding-left: 15px;
+			border-left: 3px solid #72b16a;
+			width: 110px;
+			height: 44px;
+			color: #ffffff;
+			font-size: 26px;
+			font-family: 微软雅黑;
+			display: inline-block;
+			position: absolute;
+			bottom: 8px;
+		}
+		.rbottom-up a{
+			font-size: 12px;
+			color: #72b16a;
+			font-family: 微软雅黑;
+			font-style: italic;
+			word-spacing: 140%;
+			text-decoration: none;
+			margin: 0 0 0 170px;
+			position: absolute;
+			bottom: 17px;
+		}
+		/*右下方部分的下半部分*/
+		.rbottom-down{
+			position: relative;
+			background-color: rgb(238,238,209);
+			width: 459px;
+			height: 318px;
+			margin-top: -350px;
+		    margin-right: 44px;
+		}
+		/*数字零块*/
+		.zero{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 260px;
+			height: 160px;
+			background-color: rgb(205,85,85);
+			color: white;
+		}
+		.rbottom-down ul{
+			font-size: 16px;
+			font-family: 宋体;
+			color: #5a5b5b;
+			list-style-position: inside;
+			list-style-image: url(images\4.jpg);
+			margin:0 20px 0 10px;
+		}
+		.rbottom-down li{
+			margin-top: 20px;
+			position: relative;
+		}
+		.rbottom-down li a{
+			display: inline-block;
+			font-size: 12px;
+			font-style: italic;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			text-decoration: none;
+			color: #5a5b5b;
+		}
+		.pone{
+			padding-left: 10px;
+			font-size: 110px;
+			font-family: 微软雅黑;
+			height: 86px;
+			width: 80px;
+			position: absolute;
+			display: inline-block;
+		}
+		.ptwo{
+			height: 86px;
+			width: 180px;
+			/*background-color: green;*/
+			border-left: 2px solid white;
+			position: absolute;
+			right: 0;
+			top:50%;
+			margin-top: -48px;
+			display: inline-block;
+			
+		}
+		.ptwo span{
+			font-size: 21px;
+			color: #ffffff;
+			font-family: 黑体;
+			font-style: italic;
+			display: inline-block;
+			margin-left: 7px;
+		}
+		.ptwo a{
+			font-size: 12px;
+			color: #ffffff;
+			font-family: 黑体;
+			display: inline-block;
+			text-decoration: none;
+			margin:5px 0 0 10px;
+		}
+		.hello{
+			/*background-color: green;
+			display: inline-block;*/
+			height: 160px;
+			width: 183px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			margin:0;
+			padding:0;
+		}
+		/*span打印双引号未实现*/
+		.hello span{
+			display: inline-block;
+			font-size: 72px;
+			color: #d45d5c;
+			font-family: 黑体;
+			position: absolute;
+
+		}
+		.hello p{
+			font-size: 14px;
+			color: #5a5b5b;
+			font-family: 黑体;
+			font-style: italic;
+			margin-top: 16px;
+			display: block;
+			line-height: 20px;
+		}
+		/*底端水平线*/
+		.bottom-hr{
+			width: 892px;
+			height: 1px;
+			margin-left:44px;
+			color: #938e8c;
+		}
+		/*最右下角网址链接*/
+		.bottom-a{
+			margin-right:44px;
+			font-size: 12px;
+			color: #d45d5c;
+			font-family: 黑体;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+<div class="main">
+	<div class="head">
+		<p class="lflow">ife.baidu.com</p>
+		<span class="rflow">2017.03</span>
+	</div>
+	<img style="display: inline;margin: 30px 0 0 44px;" src="images\2.jpg">
+	<div class="above rflow">
+	    <h3>About</h3>
+	    <h3>Technologe</h3>
+	    <h5>About technologe about technologe about technologe</h5>
+		<p class="lflow">700</p>
+		<h2 class="lflow">3.2</h2>
+		<h4 class="lflow">css</h4>
+		<h6 class="lflow">csscsscsscsscss</h6>
+	</div>
+	<div class="middle">
+		<span style="width: 215px;" class="lflow">
+			<h6 style="color: #418c59">What</h6>
+			<p style="font-family: 宋体;color: #767777;">前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+		</span>
+		<span style="width: 205px;margin-left: 10px" class="lflow">
+			<h6 style="color: #d2994f">When</h6>
+			<p style="color:rgba(35,24,21,0.7);">前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+		</span>
+		<span class="lflow" style="width:190px;margin-left: 20px;">
+			<h6 style="color: #cc7680">How</h6>
+			<p style="color: #767777">前端前端前端前端</p>
+			<p style="color: #767777">前端前端前端前端前端</p>
+			<p style="color: #767777">前端前端前端前端</p><br><br>
+			<p>What----------<a href="">40%</a></p>
+			<p>What----------<a href="">30%</a></p>
+			<p>What----------<a href="">20%</a></p>
+		</span>
+	</div>
+	<div class="rbottom-up rflow">
+		<div>
+			<span>前端技术</span>
+			<a href="">前端技术前端技术</a>
+		</div>
+	</div>
+	
+	<div class="lbottom">
+		<h2 style="display: inline-block;">THE</h2>
+		<h3 style="display: inline-block;margin-left: 20px;">TECHNOLOGE</h3>
+		<h3 style="margin-top: -15px;">OF&nbsp;FRONT</h3>
+		<h4>前端技术领域</h4>
+		<h1 class="lflow">前</h1>
+		<img class="rflow cflow" src="images\1.jpg">
+		<p style="text-indent: 0">前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端。</p>
+		<p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端。</p>
+		<p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端。</p>
+	</div>
+	<div class="rbottom-down rflow">
+	    <ul>
+	    	<li>前端前端前端前端前端前端........................<a href="">前端</a></li>
+	    	<li>前端前端前端前端...............................<a href="">前端前</a></li>
+	    	<li>前端前端前端前端前端前端前端....................<a href="">前端</a></li>
+	    </ul>
+		<div class="zero">
+			<p class="lflow pone">0</p>
+			<p class="ptwo">
+				<span>ONE&nbsp;TWO<br/>THREE&nbsp;FORE&nbsp;FIVE</span><br>
+				<a href="">hello&nbsp;world&nbsp;hello&nbsp;world<br>hello&nbsp;world</a>
+			</p>
+		</div>
+		<div class="hello rflow">
+			<!--<span style="top:0;left:-20px">“<p>hello&nbsp;world&nbsp;hello</p></span>
+			<span style="right: 0;bottom: 0px">”</span>双引号未实现-->
+			<p>hello&nbsp;world&nbsp;hello&nbsp;world<br>hello&nbsp;world&nbsp;hello&nbsp;world<br>hello&nbsp;world&nbsp;hello&nbsp;world</p>
+		</div>
+	</div>
+	<hr class="bottom-hr">
+	<a href="" class="bottom-a rflow">ife.baidu.com</a>
+</div>
+</body>
+</html>

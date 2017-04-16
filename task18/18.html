@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>IFE js-4</title>
+</head>
+<body>
+	<input type="text" name="score">
+	<button id="unshift">左侧入</button>
+	<button id="push">右侧入</button>
+	<button id="shift">左侧出</button>
+	<button id="pop">右侧出</button>
+	<br/>
+	<script type="text/javascript">
+	    //全局变量
+	    var data=new Array();
+	    //初始化
+		function init(){
+			var leftIn=document.getElementById("unshift");
+			var rightIn=document.getElementById("push");
+			var leftOut=document.getElementById("shift");
+			var rightOut=document.getElementById("pop");
+			leftIn.onclick=unshift;
+			rightIn.onclick=push;
+			leftOut.onclick=shift;
+			rightOut.onclick=pop;
+		}
+		//左侧入
+		function unshift(){
+            var content=document.getElementsByTagName("input")[0].value;
+			if(!isNaN(content)){
+				data.unshift(content);
+		    	unshiftOut(content);
+			}
+			else{
+				alert("请输入合法的数字。")
+			}
+		}
+		//右侧入
+		function push(){
+			var content=document.getElementsByTagName("input")[0].value;
+			if(!isNaN(content)){
+				data.push(content);
+		     	pushOut(content);
+			}
+			else{
+				alert("请输入合法的数字。")
+			}
+		}
+		//左侧出
+		function shift(){
+			data.shift();
+			shiftOut();
+		}
+		//右侧出
+		function pop(){
+			data.pop();
+			popOut();
+		}
+		//左侧入输出
+		function unshiftOut(content){
+			if (document.getElementsByTagName("P").length==0) {
+		     	var pra=document.createElement("p");
+			    document.getElementsByTagName("body")[0].appendChild(pra);
+			}
+            else{
+			    var pra=document.createElement("p");
+                var prahead=document.getElementsByTagName("p")[0];
+            	prahead.parentNode.insertBefore(pra,prahead);
+            }
+			var text=document.createTextNode(content);
+			pra.appendChild(text);
+			pra.onclick=deleteOut;
+			pra.style.display="inline-block";
+			pra.style.backgroundColor="rgb(50,255,50)";
+			pra.style.color="white";
+			pra.style.marginLeft="20px";
+		}
+		//右侧入输出
+		function pushOut(content){
+			var head=document.getElementsByTagName("body")[0];
+			var pra=document.createElement("p");
+			var text=document.createTextNode(content);
+			pra.appendChild(text);
+			pra.onclick=deleteOut;
+			head.appendChild(pra);
+			pra.style.display="inline-block";
+			pra.style.backgroundColor="rgb(50,255,50)";
+			pra.style.color="white";
+			pra.style.marginLeft="20px";
+		}
+		//左侧出输出
+		function shiftOut(){
+			var pra=document.getElementsByTagName("p")[0];
+			pra.parentNode.removeChild(pra);			
+		}
+		//右侧出输出
+		function popOut(){
+			var pra=document.getElementsByTagName("body")[0].lastChild;
+			pra.parentNode.removeChild(pra);
+		}
+		function deleteOut(){
+			alert("移除的数字为:"+this.textContent);
+			var pra=document.getElementsByTagName("p");
+			for (var i=0;i<pra.length;i++) {
+				if(pra[i].textContent==this.textContent){
+					pra[i].parentNode.removeChild(pra[i]);
+					break;
+				}
+			}
+		}
+		init();
+	</script>
+</body>
+</html>

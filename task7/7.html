@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IFE task7</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 微软雅黑;
+		}
+		body{
+			height: 4500px;
+			border-right: 1px solid green;
+			width: 1282px;
+		}
+		.lflow{
+			float: left;
+		}
+		.rflow{
+			float: right;
+		}
+		.cflow{
+			clear: both;
+		}
+		.empty{
+			width: 100%;
+			height: 50px;
+		}
+		.head{
+			width: 1281px;
+			/*position: relative;*/
+			background-color: white;
+			height: 55px;
+			display: block;
+			
+		}
+		.headimg{
+			position: absolute;
+			margin-top: 12px;
+			margin-left: 60px;
+		}
+		.head span{
+			position: absolute;
+			color: rgb(57,58,58);
+			font-size: 21px;
+			line-height: 55px;
+			margin-left: 100px;
+			width: auto;
+			/*height: 55px;
+			vertical-align: center;
+			display: inline-block;*/
+		}
+		.head ul li{
+			font-size: 14px;
+			width: auto;
+			height: 55px;
+			line-height: 55px;
+			list-style: none;
+			float: right;
+			margin-right: 50px;
+		}
+		.head ul li:hover{
+			/*text-decoration: underline;*/
+			color: red;
+			border-bottom: 2px solid red;
+		}
+		.divone{
+			width: 1281px;
+			height: 690px;
+			background:url(images/1底图.jpg)no-repeat,
+			           url(images/1底图遮罩.jpg)no-repeat;
+			color: white;
+			padding: 230px 0 0 125px;
+			margin-top: 2px;              
+		}
+		.divone-time{
+			font-size: 60px;
+			width: 1150px;
+		}
+		.divone-new{
+			font-size: 21px;
+			width: 1150px;
+		}
+		.divone-begin{
+			height: 60px;
+			width: 330px;
+			font-size: 30px;
+			background-color: rgb(231,79,77);
+			line-height: 60px;
+			text-align: center;
+		}
+		.divtwo{
+			margin-top: -180px;
+			width: 1281px;
+			padding-bottom: 50px;
+		}
+		.divtwo th{
+			width: 320px;
+			text-align: center;
+		}
+		.divtwo td{
+			width: 320px;
+			height: 40px;
+			border-right: 1px solid gray;
+		}
+		.divtwo td p{
+			font-size: 14px;
+			line-height: 18px;
+			font-family: 黑体;
+			text-align: center;
+		}
+		.divthree{
+			width: 1281px;
+			background-color: rgb(237,237,237);
+			height: 360px;
+		}
+		.divthree img{
+			margin: 100px 0 0 595px;
+		}
+		.divthree p{
+			font-family: 黑体;
+			color: rgb(161,161,161);
+			font-size: 54px;
+			line-height: 57px;
+			width: 1281px;
+			text-align: center;
+			margin-top: 55px;
+		}
+		.divfour{
+			width: 1281px;
+			height: 340px;
+			color: white;
+			background-image: /*url(images/4看地图遮罩.jpg),*/
+			                  url(images/4看地图.jpg);
+		}
+		.divfour-one{
+			padding-top: 60px;
+			font-size: 21px;
+			line-height: 42px;
+			text-align: center;
+		}
+		.divfour-two{
+			font-size: 12px;
+			line-height: 32px;
+			text-align: center;
+			margin-top: 25px;
+		}
+		.divfour hr{
+			width: 30px;
+			margin-left: 625px;
+		}
+		.divfour form{
+			margin-left: 125px;
+		}
+		.divfour form select{
+			width: 235px;
+			height: 35px;
+			margin-right: 30px;
+			background: url(images/4箭头.jpg)no-repeat right;
+			background-color: white;
+		}
+		.divfour form input{
+			width: 235px;
+			height: 37px;
+			background-color: rgb(231,79,77);
+			font-size: 14px;
+			line-height: 37px;
+			color: white;
+		    letter-spacing: 25px;
+			text-align: center;
+			border: 0;
+			padding-left: 25px;
+		}
+		.divfive{
+			width: 1281px;
+			height: 500px;
+			background-color: rgb(247,247,247);
+			padding-top: 100px;
+		}
+		.divfive div{
+			display: inline-block;
+			width: 206px;
+			height: 400px;
+			margin-right: 40px;
+		}
+		.divfive-one{
+			width: 206px;
+			font-size: 18px;
+			text-align: center;
+		}
+		.divfive-two{
+			width: 206px;
+			font-size: 14px;
+			text-align: center;
+		}
+		.divsix-one{
+			display: inline-block;
+			width: 851px;
+			height: 566px;
+			background-image: url(images/6人物.jpg);
+			color: white;
+			text-align: center;
+			position: relative;
+		}
+		.divsix-one img{
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: -15.5px;
+		}
+		.divsix-new{
+			padding-top: 130px;
+			font-size: 50px;
+			line-height: 76px;
+		}
+		.divsix-TIME{
+			font-size: 158px;
+			line-height: 180px;
+		}
+		.divsix-time{
+			font-size: 22px;
+			line-height: 43px;
+		}
+		.divsix-two{
+			position: relative;
+			width: 429px;
+			height: 566px;
+			text-align: center;
+			padding-top: 160px;
+		}
+		.divsix-two-one{
+			font-size: 22px;
+			line-height: 44px;
+		}
+		.divsix-two-one span{
+			color: rgb(226,92,96)
+		}
+		.divsix-two-two{
+			font-size: 12px;
+			line-height: 30px;
+			color: rgb(161,161,161);
+		}
+		.divsix-two-three{
+			font-size: 12px;
+			line-height: 32px;
+			color: rgb(226,92,96);
+			width: 110px;
+			border: 1px solid rgb(226,92,96);
+			position: absolute;
+			left: 50%;
+			margin-left: -55px;
+		}
+		.senven-one{
+			position: relative;
+			width: 426px;
+			height: 521px;
+			color: white;
+			text-align: center;
+			background-image: url(images/7背景左.jpg);
+			font-size: 21px;
+		}
+		.seven-one-one{
+			line-height: 31px;
+			margin-top: 170px;
+		}
+		.senven-one hr{
+			width: 30px;
+			height: 2px;
+			position: absolute;
+			left: 50%;
+			margin-left: -15px; 
+		}
+		.senven-one-two{
+			width: 170px;
+			height: 40px;
+			position: absolute;
+			left: 50%;
+			margin-left: -85px;
+			line-height: 40px;
+			border: 1px solid white;
+		}
+		.seven-two{
+			position: relative;
+			width: 423px;border: 1px solid
+			height: 521px;
+		}
+		.seven-two-one{
+			line-height: 31px;
+			margin-top: 170px;
+			text-align: center;
+			font-size: 21px;
+		}
+		.senven-two hr{
+			width: 30px;
+			height: 2px;
+			position: absolute;
+			left: 50%;
+			margin-left: -50px; 
+		}
+		.seven-two-two{
+			text-align: center;
+			font-size: 21px;
+			width: 170px;
+			height: 40px;
+			border: 1px solid rgb(231,79,77);
+			position: absolute;
+			left: 50%;
+			margin: 12px 0 0 -120px;
+			line-height: 40px;
+		}
+		.seven-three{
+			margin-top: -162px;
+			width: 431px;
+			height: 521px;
+			background-image: url(images/7人物.jpg);
+		}
+		.eight-one{
+			width: 100%;
+			font-size: 21px;
+			line-height: 31px;
+			text-align: center;
+			margin-bottom:20px;
+		}
+		.eight-two{
+			width: 100%;
+			position: relative;
+		}
+		.eight-two hr{
+			width: 30px;
+			color: red;
+			position: absolute;
+			left: 50%;
+			margin-left: -15px;
+		}
+		.eight-three{
+			width: 100%;
+			font-size: 12px;
+			line-height: 18px;
+			color: rgb(170,170,170);
+			text-align: center;
+			margin-top: 40px;
+		}
+		.nine-left{
+			width: 300px;
+			height: 350px;
+			margin-left: 140px;
+			text-align: left;
+		}
+		.nine-left h6{
+			height: 60px;
+			line-height: 60px;
+			font-size: 14px;
+		}
+		.nine-left p{
+			font-size: 14px;
+			line-height: 21px;
+			color: rgb(170,170,170);
+		}
+		.nine-right{
+			width: 771px;
+			height: 350px;
+			margin-left: 70px;
+			font-size: 14px;
+		}
+		.nine-right label{
+			display: inline-block;
+			width: 80px;
+			height: 30px;
+			line-height: 30px;
+			text-align: right;
+		}
+		.nine-right input{
+			width: 250px;
+			height: 30px;
+			margin-right: 20px;
+		}
+		.nine-right textarea{
+			width: 620px;
+			height: 110px;
+			margin-left: 80px;
+		}
+		.sub{
+			display: block;
+			width: 620px;
+			height: 40px;
+			margin-left: 80px;
+		}
+		.ten{
+			width: 100%;
+			height: 350px;
+			background-color: rgb(50,54,62);
+			color: white;
+			text-align: center;
+		}
+		.ten h6{
+			font-size: 21px;
+			width: 100%;
+			padding-top: 100px;
+		}
+		.ten p{
+			width: 100%;
+			font-size: 12px;
+			line-height: 18px;
+		}
+		.ten input{
+			width: 430px;
+			height: 30px;
+			background-color: white;
+			color: rgb(170,170,170);
+
+		}
+		.ten div{
+			width: 218px;
+			height: 25px;
+			margin-left: 531px;
+		}
+		.ten div img{
+			margin-right: 30px;
+		}
+		.foot{
+			width: 100%;
+			height: 50px;
+			background-color: rgb(47,47,56);
+			font-size: 12px;
+			line-height: 30px;
+			position: relative;
+		}
+		.foot span{
+			position: absolute;
+			bottom: 0;
+			left: 100px;
+		}
+		.foot a{
+			position: absolute;
+			bottom: 5px;
+			right: 50px;
+			color: white;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+<div class="head" name="top">
+	<img class="headimg" src="images\顶栏立方斜.jpg">
+	<span>新世界</span>
+	<ul>
+	    <li><img src="images\顶栏登陆.jpg">登录</li>
+	    <li>关于我们</li>
+	    <li>爱心社区</li>
+	    <li>项目介绍</li>
+	    <li>最新活动</li>
+		<li>首页</li>
+	</ul>
+</div>
+<div class="divone cflow">
+	<p class="divone-time">Time&nbsp;of&nbsp;new&nbsp;life&nbsp;</p>
+	<br>
+	<p class="divone-new">新时代，年轻的人们让我们一起</p>
+	<p class="divone-new">体验新生活，享受新生活</p>
+	<br><br><br><br>
+	<p class="divone-begin">开始体验</p>
+</div>
+<div class="divtwo">
+	<table>
+	<tr style="height: 120px;">
+		<th><img src="images\2-1.jpg"></th>
+		<th><img src="images\2-2.jpg"></th>
+		<th><img src="images\2-3.jpg"></th>
+		<th><img src="images\2-4.jpg"></th>
+	</tr>
+	<tr>
+		<td>
+			<p>打造全新世界观，让你更</p>
+			<p>爱你的生活</p>
+		</td>
+		<td>
+			<p>丰富多彩的公益活动，发</p>
+			<p>挥新世界的主人公意识</p>
+		</td>
+		<td>
+			<p>时尚的新理念，超前体验</p>
+			<p>未知的生活</p>
+		</td>
+		<td style="width: auto;border-right-style: none;">
+			<p>完善的培养机制，培养你</p>
+			<p>全新的世界观</p>
+		</td>
+	</tr>
+</table>
+</div>
+<div class="divthree">
+	<img src="images\3立方斜.jpg">
+	<p>关于新世界，你不知道的还有什么？</p>
+</div>
+<div class="divfour ">
+	<p class="divfour-one">查找新世界城市活动信息</p>
+	<hr>
+	<p class="divfour-two">每个城市的有不同的活动信息，请自主查询您所需要了解的城市</p>
+	<br>
+	<form method="post" action="save.php">
+		<select value="njknk">
+            <option value="北京">中国</option>
+            <option value="上海">美国</option>
+            <option value="上海">英国</option>
+            <option value="广州">法国</option>
+            <option value="上海">俄罗斯</option>
+        </select>
+        <select>
+            <option value="北京">福建省</option>
+            <option value="上海">浙江省</option>
+            <option value="上海">广东省</option>
+            <option value="广州">江苏省</option>
+            <option value="上海">陕西省</option>
+        </select>
+        <select>
+            <option value="北京">北京</option>
+            <option value="上海">上海</option>
+            <option value="上海">广州</option>
+            <option value="广州">深圳</option>
+            <option value="上海">重庆</option>
+        </select>
+        <input type="submit" name="submit" value="搜索">
+	</form>
+</div>
+<div class="divfive">
+	<div class="lflow" style="margin-left: 150px;">
+		<img src="images\5人物1.jpg">
+		<p class="divfive-one">北京活动</p>
+		<p class="divfive-two">新社区大联盟</p>
+	</div>
+	<div class="lflow">
+		<p class="divfive-one" style="">上海活动</p>
+		<p class="divfive-two">夜上海新景观探索</p>
+		<img src="images\5人物2.jpg">
+	</div>
+	<div class="lflow">
+		<img src="images\5人物3.jpg">
+		<p class="divfive-one">深圳活动</p>
+		<p class="divfive-two">全新海岸线观点站</p>
+	</div>
+	<div class="lflow">
+		<img src="images\5人物4.jpg">
+		<p class="divfive-one">香港活动</p>
+		<p class="divfive-two">奢侈消费大派送</p>
+	</div>
+</div>
+<div class="divsix-one">
+	<p class="divsix-new">新世界</p>
+	<p class="divsix-TIME">TIME</p>
+	<p class="divsix-time">@新世界-北京</p>
+	<p class="divsix-time">2017.03.29</p>
+	<img src="images/6白色箭头.jpg">
+</div>
+<div class="divsix-two rflow">
+	<p class="divsix-two-one">新世界/<span>01</span></p><br>
+	<p class="divsix-two-two">新世界是个新世界新世界是个新世界新世界是个新世界</p>
+	<p class="divsix-two-two">新世界是个新世界新世界是个新世界新世界是个新世界</p>
+	<p class="divsix-two-two">新世界是个新世界新世界是个新世界新世界是个新世界</p>
+	<p class="divsix-two-two">新世界是个新世界新世界是个新世界</p>
+	<br><br>
+	<p class="divsix-two-three">更多详情</p>
+</div>
+<div class="senven-one lflow">
+	<p class="seven-one-one">新时代</p>
+	<p class="seven-one-one" style="margin-top: 0">关于爱生活的我们</p>
+	<br><hr><br>
+	<p class="senven-one-two">查看更多</p>
+</div>
+<div class="seven-three rflow"></div>
+<div class="senven-two ">
+	<p class="seven-two-one">新时代</p>
+	<p class="seven-two-one" style="margin-top: 0">关于爱生活的我们</p>
+	<br><hr><br>
+	<p class="seven-two-two">查看更多</p>
+</div>
+<div class="empty cflow"></div>
+<div class="eight-one cflow">
+	<p>成为我们的志愿者</p>
+</div>
+<div class="eight-two">
+	<hr>
+</div>
+<div class="eight-three">
+	<p>新世界的大家庭需要每一个爱生活的人加入，如果你够年轻，有梦想，有激情</p>
+	<p>那就不要犹豫，快来加入我们，成为改变所有人生活的人</p>
+</div>
+<div class="empty"></div>
+<div class="nine-left lflow">
+	<h6>新世界志愿者协议</h6>
+	<p>加入新世界志愿者的人员必须遵守中华人民共和国的相关法律法规，并且本着平等资源的原则</p>
+	<h6>新世界志愿者权利</h6>
+	<p>新世界志愿者享受新世界内部资源共享的权利，并且享受所在新世界活动的优先参与资格</p>
+	<h6>更多条款</h6>
+</div>
+<div class="lflow nine-right">
+	<form method="post" action="save.php">
+		<label>姓名：</label>
+		<input type="text" name="name">
+		<label>年龄：</label>
+		<input type="text" name="ages"><br><br>
+		<label>联系方式：</label>
+		<input type="text" name="way">
+		<label>联系地址：</label>
+	    <input type="text" name="address"><br><br>
+	    <textarea>请简单描述您梦想的生活:</textarea><br><br>
+	    <input style="width: 620px;height: 40px;margin-left: 80px;border-radius: 10px;" type="submit" name="提交申请" value="提交申请"> 
+	</form>
+</div>
+<div class="ten cflow">
+	<h6>联系我们</h6><br>
+	<p>为了更好地获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯</p>
+	<p>也可以通过以下任何方式关注我们动态</p><br>
+	<input type="email" name="email" value="someone@email.com">
+	<input style="width: 90px;height:34px;margin-left: -3.5px;background-color: rgb(110,114,120);color: white" type="submit" name="submit" value="提交">
+	<div class="empty"></div>
+	<div>
+		<img src="images\底部1.jpg">
+		<img src="images\底部2.jpg">
+		<img src="images\底部3.jpg">
+		<img style="margin-right: 0;" src="images\底部4.jpg">
+	</div>
+</div>
+<div class="foot">
+	<span>@2017新世界</span>
+	<a href="#top">back&nbsp;to&nbsp;top</a>
+</div>
+</body>
+</html>

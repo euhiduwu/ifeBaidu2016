@@ -1,0 +1,490 @@
+	*{
+	margin: 0;
+	padding: 0;
+   }
+body{
+	font-family: 微软雅黑;
+	width: 1281px;
+	height: 1300px;
+	border-right: 1px solid green;
+	background-color: rgb(238,238,237);
+}
+.lflow{
+	float: left;
+}
+.rflow{
+	float: right;
+}
+.cflow{
+	clear: both;
+}
+#head{
+	background-color: rgb(33,137,191);
+	height: 56px;
+}
+#head .logo{
+	margin: 10px 0 0 50px;
+}
+#head p{
+	font-size: 12px;
+	line-height: 56px;
+	margin-right: 90px;
+}
+#head .login{
+	margin: 20px 5px 0 0;
+}
+#head form{
+	width: 300px;
+	height: 26px;
+	background-color: white;
+	border:1px solid white;
+	border-radius: 10px;
+	margin: 14px 20px 0 0;
+}
+#head .search{
+	width: 17px;
+	height: 17px;
+	margin: 4.5px 0 0 10px;
+}
+#head input{
+	width: 260px;
+	height: 17px;
+	margin: 0 0 0 2px;
+	border-style: none;
+}
+
+#left{
+	width: 260px;
+	height: 1200px;
+	font-size: 12px;
+	color: white;
+	background-color: rgb(42,46,61);
+}
+#left img{
+	margin: 20px 20px 30px 45px;
+}
+#left p{
+	margin-top: 20px;
+	height: 47px;
+	line-height: 47px;
+}
+#left table{
+	margin-bottom: 50px;
+}
+#left td{
+	width: 130px;
+	height: 15px;
+	text-align: center;
+}
+#left ul{
+	margin: 0px 0 0px 45px;
+	list-style-image: url(images/左星号.jpg);
+}
+#left li{
+	margin: 15px 0 15px 0;
+}
+#left ul ul{
+	list-style-image: url(images/左右箭头.jpg);
+}
+#left ul ul ul{
+	list-style-image: url(images/左文档.jpg);
+}
+
+#content{
+	width: 1020px;
+	height: 1205px;
+}
+
+#content-1{
+	height: 30px;
+	background-color: white;
+}
+#content-1 p{
+	display: inline-block;
+	padding-left: 30px;
+	line-height: 30px;
+}
+
+#content-2{
+	margin: 20px 70px 0 70px;
+	padding-top: 10px;
+	height: 80px;
+	background-color: white;
+	position: relative;
+	border-bottom: 1px solid green;
+}
+#content-2 img{
+	position: absolute;
+	top: 23.5px;
+	left: 374px;
+}
+#content-2 label{
+	display: inline-block;
+	margin-left: 30px;
+	width: 50px;
+	height: 22px;
+	line-height: 22px;
+	text-align: right;
+}
+#content-2 span{
+	display: inline-block;
+	width: 185px;
+}
+#content-2 select{
+	width: 100px;
+	height: 22px;
+}
+#content-2 input{
+	width: 50px;
+	height: 30px;
+	background-color: rgb(33,137,191);
+	color: white;
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	border-style: none;
+}
+
+#content-3{
+	margin: 15px 60px 0 60px;
+	height: 70px;
+}
+#content-3 td{
+	width: 110px;
+	height: 70px;
+	text-align: center;
+	position: relative;
+	margin-right: 20px;
+	background-color: white;
+	font-size: 14px;
+}
+#content-3 td p{
+	width: 100%;
+	color: rgb(236,101,0);
+	font-size: 18px;
+	line-height: 18px;
+	position: absolute;
+	bottom: 5px;
+}
+#content-3 .hover-clear{
+	width: 15px;
+}
+#content-3 .right{
+	text-align: right;
+	position: relative;
+}
+#content-3 .right img{
+	position: absolute;
+	top: 19px;
+	left: 15px;
+}
+
+#content-4{
+	margin: 0 40px 0 40px;
+	width: 100%;
+}
+#content-4 .p{
+	margin: 40px 40px 0 30px;
+	width: 100%
+	text-align: left;
+	font-size: 14px;
+}
+#content-4 table{
+	margin-top: -25px;
+}
+#content-4 td{
+	position: relative;
+	height: 70px;
+	width: 195px;
+	background-color: white;
+}
+#content-4 td img{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+#content-4 td p{
+	padding: 5px 0 0 10px;
+	width: 100%;
+	font-size: 14px;
+	text-align: left;
+}
+#content-4 .td-1{
+	border-left: 2px solid rgb(67,178,158);
+}
+#content-4 .td-2{
+	border-left: 2px solid rgb(56,138,193);
+}
+#content-4 .td-3{
+	border-left: 2px solid rgb(201,74,54);
+}
+#content-4 .td-4{
+	border-left: 2px solid rgb(226,205,71);
+}
+
+#content-5{
+	margin: 20px 0 0 70px;
+	height: 360px;
+	width: 530px;
+	background-color: white;
+	display: inline-block;
+}
+#content-5 .head{
+	width: 510px;
+	height: 40px;
+	background-color: rgb(244,245,246);
+	padding-left: 20px;
+	line-height: 40px;
+	text-align: left;
+}
+#content-5 ul{
+	margin: 10px 0 0 20px;
+}
+#content-5 li{
+	width: 85px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin-right: 5px;
+	list-style-type: none;
+	display: inline-block;
+	background-color: rgb(237,237,240);
+}
+#content-5 .li-1{
+	width: 85px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin-right: 5px;
+	list-style-type: none;
+	display: inline-block;
+	background-color: white;
+}
+#content-5 table{
+	margin: 20px 0 0 20px;
+	border-collapse:collapse;
+	text-align: center;
+}
+#content-5 td{
+	height: 35px;
+	width: 115px;
+	border: 1px solid rgb(203,203,203);
+}
+#content-5 .td-1{
+	background-color: rgb(237,237,240);
+	height: 35px;
+	width: 100px;
+	border: 1px solid rgb(203,203,203);
+}
+
+#content-6{
+	margin: 20px 0 0 10px;
+	height: 360px;
+	width: 335px;
+	background-color: white;
+}
+#content-6 .head{
+	width: 315px;
+	height: 40px;
+	background-color: rgb(244,245,246);
+	padding-left: 20px;
+	line-height: 40px;
+	text-align: left;
+}
+#content-6 table{
+	margin: 20px 20px 0 20px;
+	border-collapse:collapse;
+	font-size: 13px;
+}
+#content-6 td{
+	height: 60px;
+	border: 1px solid rgb(203,203,203);
+	vertical-align: top;
+}
+#content-6 .td-2{
+	width: 100px;
+}
+#content-6 .td-3{
+	width: 195px;
+}
+#content-6 .td-4{
+	height: 120px;
+}
+#content-6 img{
+	margin:15px 0 0 20px;
+}
+#content-6 span{
+	font-size: 12px;
+	margin-top: 20px;
+}
+#content-6 input{
+	width: 40px;
+	height: 25px;
+	background-color: rgb(33,137,191);
+	color: white;
+	margin: 5px 20px 0 0;
+	border-style: none;
+}
+
+#content-7{
+	width: 350px;
+	height: 400px;
+	margin: 30px 0 0 70px;
+	background-color: white;
+	font-size: 14px;
+	position: relative;
+}
+#content-7 .head{
+	width: 330px; 
+	height: 40px;
+	padding-left: 20px;
+	line-height: 40px;
+	text-align: left;
+	background-color: rgb(244,245,246);
+}
+#content-7 .select-1{
+	width: 80px;
+	height: 30px;
+	margin-left: 20px;
+}
+#content-7 .select-2{
+	width: 50px;
+	height: 30px;
+	margin-left: 10px;
+}
+#content-7 .select-3{
+	width: 80px;
+	height: 30px;
+	margin-left: 10px;
+}
+#content-7 span{
+	width: 60px;
+	height: 28px;
+	margin-left: 10px;
+	border: 1px solid;
+	display: inline-block;
+	margin-top: -10px;
+	line-height: 28px;
+	position: absolute;
+	right: 20px;
+	top: 69px;
+	text-align: center;
+}
+#content-7 .table-1{
+	width: 310px;
+	height: 40px;
+	margin: 15px 20px 0 20px;
+	border-style: none;
+	border-top: 1px solid green;
+	border-bottom: 1px solid green;
+}
+#content-7 table{
+	margin: 15px 20px 0 20px;
+	/*border-style: none;*/
+	border-collapse: collapse;
+	width: 310px;
+	vertical-align: top;
+	text-align: center;
+	height: 200px;
+}
+#content-7 .yellow{
+	border: 1px solid rgb(245,198,43);
+}
+#content-7 .redcolor{
+	color: red;
+}
+#content-7 td p{
+	width: 100%;
+	text-align: center;
+	color: black;
+}
+
+#content-8{
+	width: 515px;
+	height: 400px;
+	margin: 30px 0 0 10px;
+	background-color: white;
+	font-size: 14px;
+	position: relative;
+}
+#content-8 .head{
+	width: 495px; 
+	height: 40px;
+	padding-left: 20px;
+	line-height: 40px;
+	text-align: left;
+	background-color: rgb(244,245,246);
+}
+#content-8 table{
+	margin: 20px 30px 0 30px;
+	height: 298px;
+	width: 460px;
+	border-collapse: collapse;
+}
+#content-8 .tr-1{
+	background-color: rgb(244,245,246);
+}
+#content-8 td{
+	width: 70px;
+	border: 1px solid rgb(220,220,220);
+	text-align: center;
+	vertical-align: center;
+}
+#content-8 .td-2{
+	text-align: left;
+	width: 320px;
+	padding-left: 20px;
+}
+#content-8 .td-2 p{
+	width: 200px;
+	height: 6px;
+	border: 1px solid white;
+	border-radius: 3px;
+	margin: 5px 20px 0 0;
+	float: right;
+	background-color: rgb(220,220,220);
+}
+#content-8 .td-2 p span{
+	display: block;
+	height: 100%;
+}
+#content-8 .span-1{
+	background-color: rgb(237,110,82);
+	width: 95%;
+}
+#content-8 .span-2{
+	background-color: rgb(239,128,80);
+	width: 85%;
+}
+#content-8 .span-3{
+	background-color: rgb(241,59,79);
+	width: 75%;
+}
+#content-8 .span-4{
+	width: 65%;
+	background-color: rgb(126,202,240);
+}
+#content-8 .span-5{
+	width: 55%;
+	background-color: rgb(126,202,240);
+}
+#content-8 .span-6{
+	width: 45%;
+	background-color: rgb(126,202,240);
+}
+#content-8 .span-7{
+	width: 35%;
+	background-color: rgb(126,202,240);
+}
+#content-8 .span-8{
+	width: 25%;
+	background-color: rgb(126,202,240);
+}
+#content-8 .span-9{
+	width: 15%;
+	background-color: rgb(126,202,240);
+}
+#content-8 .span-10{
+	width: 5%;
+	background-color: rgb(126,202,240);
+}
