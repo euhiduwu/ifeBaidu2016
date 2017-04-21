@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>IFE js-21</title>
+	<style type="text/css">
+		textarea{
+			width: 200px;
+			height: 100px;
+			display: block;
+			margin-top: 30px;
+		}
+		button{
+			margin-bottom: 30px;
+		}
+		input{
+			margin-bottom: 30px;
+		}
+		p{
+			display: inline-block;
+			margin:0 10px;
+			border: 2px solid rgb(255,48,48);
+			border-radius: 10px;
+		}
+		p{
+			cursor: pointer;
+		}
+		p:hover:before{
+			content: "删除";
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<label>Tag:</label>
+		<input type="text" name="tag">
+	</div>
+	<div id="tag"></div>
+	<div>
+		<textarea placeholder="兴趣爱好的输入，可以通过用回车，逗号，顿号，空格等符号作为间隔。"></textarea>
+		<button>确认兴趣爱好</button>
+	</div>
+	<div id="hobby"></div>
+	<script type="text/javascript" src="21.js"></script>
+</body>
+</html>
