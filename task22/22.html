@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>IFE js-22</title>
+	<style type="text/css">
+	    *{
+	    	border: 1px solid green;
+			padding: 20px;
+			margin: 0;
+	    }
+	    body{
+	    	border-style: none;
+	    }
+	    #body{
+	    	width: 900px;
+	    	display: flex;
+	    	justify-content: space-between;
+	    }
+		#main{
+			width: 400px;
+			height: 200px;
+			display: flex;
+			justify-content: space-between;
+		}
+		.one{
+		    width: 145px;
+			height: auto;
+			display: flex;
+			justify-content: space-between;
+		}
+		.two{
+			width: 100%;
+			height: auto;
+			display: flex;
+			justify-content: space-between;
+		}
+		button{
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+    <div id="body">
+    	<div id="main">
+		<div class="one">
+			<div class="two">
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<div class="one">
+			<div class="two">
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		</div>
+		<div id="main">
+			<div class="one">
+				<div class="two">
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div class="one">
+				<div class="two">
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+    </div>
+	<button id="btnOne">前序</button>
+	<button id="btnTwo">中序</button>
+	<button id="btnThree">后序</button>
+	<script type="text/javascript" src="22.js"></script>
+</body>
+</html>

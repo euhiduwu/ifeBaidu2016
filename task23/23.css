@@ -1,0 +1,21 @@
+*{
+	margin: 20px;
+	padding: 0;
+	border: 1px solid black;
+}
+body,html{
+	border-style: none;
+}
+div{
+   padding: 10px;
+   border: 1px solid black;
+   float: left;
+   margin: 10px;
+   background-color: white;
+}
+#Supper{
+	width: 1000px;
+}
+input,button{
+	height: 20px;
+}
