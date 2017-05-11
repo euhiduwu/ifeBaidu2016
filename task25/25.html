@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>IFE js-25</title>
+	<style type="text/css">
+		div{
+			margin: 10px 10px 0 20px;
+			width: auto;
+		}
+		.right-arrow{
+		    width: 0;
+		    height: 0;
+		    border-left: 10px solid #6898c2;
+		    border-top: 5px solid transparent;
+		    border-bottom: 5px solid transparent;
+		    cursor: pointer;
+		    display: inline-block;
+		}
+		.down-arrow{
+		    width: 0;
+		    height: 0;
+		    border-top: 10px solid #6898c2;
+		    border-left: 5px solid transparent;
+		    border-right: 5px solid transparent;
+		    cursor: pointer;
+		    display: inline-block;
+		}
+		.empty-arrow{
+		    border-left:10px solid transparent;
+		}
+		img{
+			margin-bottom: -4px;
+			cursor: pointer;
+			display: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		#main{
+			border-right: 1px solid green;
+			width: 500px;
+			float: left;
+		}
+		input{
+			height: 20px;
+			margin-bottom: 10px;
+		}
+		#right{
+			border-right: 1px solid green;
+			float: left;
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+	    <div id="special">
+	    	<span class="down-arrow"></span>
+	    	<a class="down">福建省
+		    	<img src="images/add.png">
+	    	</a>
+	    	<div>
+	        	<span class="down-arrow"></span>
+				<a class="down">省会        
+				    <img src="images/add.png">
+				    <img src="images/delete.png">
+			    </a>
+				<div>
+				    <span class="down-arrow"></span>
+				    <a class="down">福州市
+					    <img src="images/add.png">
+					    <img src="images/delete.png">
+				    </a>
+				    <div>
+		                <span class="empty-arrow"></span>
+		                <a class="empty">基本信息
+						    <img src="images/add.png">
+						    <img src="images/delete.png">
+					    </a>
+				    </div>
+					<div>
+		                <span class="empty-arrow"></span>
+		                <a class="empty">城市概述
+						    <img src="images/add.png">
+						    <img src="images/delete.png">
+					    </a>
+					</div>
+					<div>
+					    <span class="empty-arrow"></span>
+					    <a class="empty">行政区划
+						    <img src="images/add.png">
+						    <img src="images/delete.png">
+					    </a>
+					</div>
+	            </div>
+	        </div>
+
+		    <div>
+				<span class="down-arrow"></span>
+				<a class="down">地级市
+				    <img src="images/add.png">
+				    <img src="images/delete.png">
+			    </a>
+				<div>
+				    <span class="down-arrow"></span>
+				    <a class="down">厦门市
+					    <img src="images/add.png">
+					    <img src="images/delete.png">
+				    </a>
+				    <div>
+				    	<span class="empty-arrow"></span>
+				    	<a class="empty">思明区
+					    	<img src="images/add.png">
+					    	<img src="images/delete.png">
+				    	</a>
+				    </div>
+				    <div>
+				    	<span class="empty-arrow"></span>
+				    	<a class="empty">集美区
+					    	<img src="images/add.png">
+					    	<img src="images/delete.png">
+				    	</a>
+				    </div>
+				</div>
+				<div>
+	                <span class="empty-arrow"></span>
+	                <a class="empty">莆田市
+					    <img src="images/add.png">
+					    <img src="images/delete.png">
+				    </a>
+				</div>
+				<div>
+	                <span class="empty-arrow"></span>
+	                <a class="empty">三明市
+					    <img src="images/add.png">
+					    <img src="images/delete.png">
+				    </a>
+				</div>
+				<div>
+				    <span class="empty-arrow"></span>
+				    <a class="empty">泉州市
+					    <img src="images/add.png">
+					    <img src="images/delete.png">
+				    </a>
+				</div>
+				<div>
+					<span class="empty-arrow"></span>
+					<a class="empty">漳州市
+					    <img src="images/add.png">
+					    <img src="images/delete.png">
+				    </a>
+				</div>
+		    </div>
+			
+			<div>
+            	<span class="down-arrow"></span>
+				<a class="down">县级市
+				    <img src="images/add.png">
+				    <img src="images/delete.png">
+			    </a>
+				<div>
+				    <span class="empty-arrow"></span>
+				    <a class="empty">福清市
+					    <img src="images/add.png">
+					    <img src="images/delete.png">
+				    </a>
+				</div>
+				<div>
+	                <span class="empty-arrow"></span>
+	                <a class="empty">长乐市
+					    <img src="images/add.png">
+					    <img src="images/delete.png">
+				    </a>
+				</div>
+				<div>
+	                <span class="empty-arrow"></span>
+	                <a class="empty">永安市
+					    <img src="images/add.png">
+					    <img src="images/delete.png">
+				    </a>
+				</div>
+			</div>
+        </div>
+	</div>
+	<div id='right'>
+		<div>
+			<input type="text" name="text">
+			<br>
+			<button id="search">搜索</button>
+		</div>
+		<div id="output"></div>
+	</div>
+	<script type="text/javascript" src="25.js"></script>
+</body>
+</html>
