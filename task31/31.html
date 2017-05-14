@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>IFE js-31</title>
+	<style type="text/css">
+		table{
+			width: 550px;
+			position: absolute;
+			left: 50%;
+			margin: 50px 0 0 -275px;
+		}
+		td{
+			padding: 10px;
+			border: 1px solid green;
+			text-align: center;
+		}
+		td{
+			width: 200px;
+			height: 30px;
+		}
+		select{
+			width: 150px;
+			height: 28px;
+		}
+		#work{
+			width: 350px;
+			height: 28px;
+		}
+		#two{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id='content'>
+		<form method="post" action="save.php">
+			<table>
+				<tr>
+					<td>
+						<input id='student' type="radio" name="student">在校生
+				    </td>
+				    <td>
+						<input id="nostudent" type="radio" name="nostudent">非在校生
+					</td>
+				</tr>
+
+				<tr id='one'>
+					<td>学校：
+						<select id='city'>
+							<option>北京</option>
+							<option>上海</option>
+							<option>西安</option>
+						</select>
+					</td>
+
+					<td>
+						<select id='school'>
+							<option>北京大学</option>
+							<option>清华大学</option>
+							<option>交通大学</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr id='two'>
+					<td colspan="2">就业单位：
+						<input id="work" type="text" name="">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<script type="text/javascript" src='31.js'></script>
+</body>
+</html>
