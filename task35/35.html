@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>IFE js-35</title>
+	<style type="text/css">
+		#left{
+			width: 600px;
+			height: auto;
+			margin: 0 0 0 0px;
+			display: inline-block;
+			border-right: 1px solid green;
+		}
+		table{
+			border-collapse: collapse;
+			margin-bottom: 10px;
+		}
+		td{
+			width: 50px;
+			height: 50px;
+			text-align: center;
+			border: 1px solid gray;
+		}
+		tr:nth-Child(-n+1) td,td:nth-Child(-n+1){
+			border-style: none;
+			font-size: 20px;
+		}
+		#left span{
+			display: inline-block;
+		}
+
+		#right{
+			width: 300px;
+			height: auto;
+			display: inline-block;
+		}
+		#right .tip{
+			width: auto;
+			height: auto;
+			margin: 0 0 10px 0;
+			color: gray;
+		}
+		#right #row{
+			width: 25px;
+			height: 205px;
+			font-size: 20px;
+			background-color: gray;
+			color: white;
+			float: left;
+		    text-align: center;
+		    overflow: hidden;
+		}
+		#right #area{
+			width: 200px;
+			height: 200px;
+			line-height: 25px;
+			font-size: 20px;
+			background-color: black;
+			color: green;
+			float: left;
+		}
+		#right button{
+			height: 30px;
+			width: 50px;
+			margin: 10px 0 0 50px;
+			border-radius: 5px;
+		}
+		#right .span{
+			width: 100%;
+			height: 25px;
+			font-size: 18px;
+			display: block;
+		}
+		#right .error{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="left">
+		<table id='table'>
+		    <tbody>
+			    <tr>
+					<td></td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+				</tr>
+
+				<tr>
+					<td>1</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>2</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>3</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>4</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>5</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>6</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>7</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>8</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>9</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>10</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+		    </tbody>
+		</table>
+	</div>
+
+	<div id='right'>
+	    <div class='tip'>
+	    	<p>不区分大小写.</p>
+	    	<p>输入mtop/mright/mback/mleft+num:向屏幕的上/右/下/左侧移动num格，方向不变.</p>
+	    	<p>输入ttop/tright/tback/tleft+num:方向转向屏幕上/右/下/左侧，并向屏幕的X侧移动num格.</p>
+	    	<p>输入go+num:前行num格.</p>
+	    </div>
+		<div id='row'></div>
+		<textarea id='area'></textarea>
+		<button id='action'>执行</button>
+		<button id='refresh'>refresh</button>
+	</div>
+	<script type="text/javascript" src='35.js'></script>
+</body>
+</html>

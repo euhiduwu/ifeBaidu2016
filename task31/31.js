@@ -4,43 +4,19 @@ var data={
 	西安:['西北工业大学','西安交通大学','西安电子科技大学']
 }
 
-function selectSchoolChange(i){
-	console.log(i);
-}
-
 function selectChange(){
 	var selectCity=document.getElementById('city');
 	var selectSchool=document.getElementById('school');
-	console.log(selectCity.children.length);
 	selectCity.onchange=function(){
-		console.log(this.value);
 		var school=data[this.value];
 		selectSchool.innerHTML='';
-		console.log(school.length);
 		for(var i=0;i<school.length;++i){
 			var option=document.createElement('option');
 			option.innerHTML=school[i];
 			selectSchool.appendChild(option);
-
-		//selectSchool.innerHTML+="<option>ere</option>";
-		
-		
 	}
-
-	console.log(selectSchool.children.length);
-
-
-
-
-
-
 	for(var i=0;i<selectCity.children.length;++i){
-		/*if(selectCity.children[i].selected=='selected'){
-			console.log(selectCity.children[i].nodeValue);
-		}*/
 		selectCity.children[i].onclick=function(){
-			console.log(1);
-			selectSchoolChange(i);
 		}
 	}
 }}
@@ -60,11 +36,10 @@ function radioChange(){
 		student.checked='';
 		trOne.style.display='none';
 		trTwo.style.display='table-row';
+		trTwo.children[0].children[0].value='';
 	}
 }
 
-function init(){
+window.onload=function(){
 	radioChange();
 }
-
-init();
